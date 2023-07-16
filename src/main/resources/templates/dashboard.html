@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .sidebar {
+            background-color: #343a40;
+            color: #fff;
+            height: 100vh;
+        }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 sidebar">
+      <h3 class="mt-3 ml-3">PaymentApp</h3>
+      <ul class="nav flex-column mt-3">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/dashboard}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/register}">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/addamount}">Add Amount</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/transfer}">Send Amount</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/transactions}">Transactions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/login?logout}">Logout</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-10 content">
+      <h3>Welcome <span th:text="${username} "></span> to the PaymentApp Dashboard</h3>
+      <br>
+
+      <p class="form-group"><span th:text="${message}"/></p>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
